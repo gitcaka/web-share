@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前端</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
+    <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+</head>
+<body>
+
+<div class="title">前端框架</div>
+<div class="container">
+    <div class="item">
+        <div class="box">
+            <div class="boxcontain">
+                <img src="{{ url_for('static', filename = 'img/Javascript.png') }}">
+                <h1>原生开发</h1>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="box">
+            <div class="boxcontain">
+                <img src="{{ url_for('static', filename = 'img/vue.png') }}">
+                <h1>VUE</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.box').eq(0).click(function () {
+        window.location.href = '/native';
+    })
+</script>
+</body>
+</html>

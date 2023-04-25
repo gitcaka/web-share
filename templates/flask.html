@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
+    <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+</head>
+<body>
+
+<div class="title">Flask</div>
+<div class="container">
+    <div class="item">
+        <div class="box">
+            <div class="boxcontain">
+                <img src="{{ url_for('static', filename = 'img/bijiben.png') }}">
+                <h1>捕获电脑摄像头</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box">
+            <div class="boxcontain">
+                <img src="{{ url_for('static', filename = 'img/shouji.png') }}">
+                <h1>捕获手机摄像头</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box">
+            <div class="boxcontain">
+                <img src="{{ url_for('static', filename = 'img/suanfa.png') }}">
+                <h1>结合算法</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.box').eq(0).click(function () {
+        window.location.href = '/bijiben';
+    })
+    $('.box').eq(1).click(function () {
+        window.location.href = '/shouji';
+    })
+    $('.box').eq(2).click(function () {
+        window.location.href = '/suanfa';
+    })
+</script>
+</body>
+</html>
