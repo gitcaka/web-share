@@ -1,10 +1,13 @@
-import time
 import cv2
 import threading
 import subprocess
 from flask import Flask, render_template, Response
 
 app = Flask(__name__)
+app.static_folder = 'static'
+
+phone_rtsp_url = 'rtsp://192.168.117.106:8554/live'  # 手机摄像头RTSP地址
+paddle_out_rtsp_url = 'rtsp://localhost:8554/output'  # Paddle检测后输出的RTSP地址
 
 
 def gen_frames(address):
@@ -87,12 +90,12 @@ def video_feed_0():
 
 @app.route('/video_feed_2')
 def video_feed_2():
-    return Response(gen_frames('rtsp://192.168.117.106:8554/live'), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(gen_frames(phone_rtsp_url), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 @app.route('/video_feed_3')
 def video_feed_3():
-    return Response(gen_frames('rtsp://127.0.0.1/10008/Emotion'), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(gen_frames(paddle_out_rtsp_url), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 if __name__ == '__main__':

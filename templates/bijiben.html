@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>电脑摄像头</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
-    <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+  <meta charset="UTF-8">
+  <title>电脑摄像头</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="static/js/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="title">电脑摄像头</div>
 <div class="container">
-    <div class="item">
-        <div class="box">
-            <div class="boxcontain">
-                <img src="{{ url_for('video_feed_0') }}" style="object-fit: cover;object-position: center;height: 10rem; width: 10rem">
-                <h1>捕获电脑摄像头</h1>
-            </div>
-        </div>
+  <div class="item">
+    <div class="box">
+      <div class="boxcontain">
+        <img src="{{ url_for('video_feed_0') }}" style="object-fit: cover;object-position: center;height: 10rem; width: 10rem">
+        <h1>捕获电脑摄像头</h1>
+      </div>
     </div>
+  </div>
 </div>
 <script>
 

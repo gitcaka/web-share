@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Web 应用开发技术分享</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
-    <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+  <meta charset="UTF-8">
+  <title>Web 应用开发技术分享</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="static/js/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="title">Web 应用开发技术分享</div>
 <div class="container">
-    <div class="item">
-        <div class="box">
-            <div class="boxcontain">
-                <img src="{{ url_for('static', filename = 'img/qianduan.png') }}">
-                <h1>前端</h1>
-            </div>
-        </div>
+  <div class="item">
+    <div class="box">
+      <div class="boxcontain">
+        <img src="static/img/qianduan.png">
+        <h1>前端</h1>
+      </div>
     </div>
+  </div>
 
-    <div class="item">
-        <div class="box">
-            <div class="boxcontain">
-                <img src="{{ url_for('static', filename = 'img/shipinliu.png') }}">
-                <h1>视频流</h1>
-            </div>
-        </div>
+  <div class="item">
+    <div class="box">
+      <div class="boxcontain">
+        <img src="static/img/shipinliu.png">
+        <h1>视频流</h1>
+      </div>
     </div>
+  </div>
 
-    <div class="item">
-        <div class="box">
-            <div class="boxcontain">
-                <img src="{{ url_for('static', filename = 'img/houduan.png') }}">
-                <h1>后端</h1>
-            </div>
-        </div>
+  <div class="item">
+    <div class="box">
+      <div class="boxcontain">
+        <img src="static/img/houduan.png">
+        <h1>后端</h1>
+      </div>
     </div>
+  </div>
 
-    <script>
-        $('.box').eq(0).click(function () {
-            window.location.href = '/qianduan';
-        })
-        $('.box').eq(1).click(function () {
-            window.location.href = '/shipinliu';
-        })
-        $('.box').eq(2).click(function () {
-            window.location.href = '/houduan';
-        })
-    </script>
+  <script>
+    $('.box').eq(0).click(function () {
+      window.location.href = '/qianduan';
+    })
+    $('.box').eq(1).click(function () {
+      window.location.href = '/shipinliu';
+    })
+    $('.box').eq(2).click(function () {
+      window.location.href = '/houduan';
+    })
+  </script>
 </div>
 </body>
 </html>

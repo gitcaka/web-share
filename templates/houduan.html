@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>后端框架</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
-    <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+  <meta charset="UTF-8">
+  <title>后端框架</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="static/js/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="title">后端框架</div>
 <div class="container">
-    <div class="item">
-        <div class="box">
-            <div class="boxcontain">
-                <img src="{{ url_for('static', filename = 'img/flask.png') }}">
-                <h1>Flask</h1>
-            </div>
-        </div>
+  <div class="item">
+    <div class="box">
+      <div class="boxcontain">
+        <img src="static/img/flask.png">
+        <h1>Flask</h1>
+      </div>
     </div>
-    <div class="item">
-        <div class="box">
-            <div class="boxcontain">
-                <img src="{{ url_for('static', filename = 'img/django.png') }}">
-                <h1>Django</h1>
-            </div>
-        </div>
+  </div>
+  <div class="item">
+    <div class="box">
+      <div class="boxcontain">
+        <img src="static/img/django.png">
+        <h1>Django</h1>
+      </div>
     </div>
+  </div>
 </div>
 <script>
-    $('.box').eq(0).click(function () {
-        window.location.href = '/flask';
-    })
+  $('.box').eq(0).click(function () {
+    window.location.href = '/flask';
+  })
 </script>
 </body>
 </html>
